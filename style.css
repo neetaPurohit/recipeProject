@@ -31,9 +31,39 @@ header nav h1{
 header nav form{
   display: flex;
   justify-content: center;
-
 }
 form input[type="text"]{
  flex-grow: 1;
  margin-right: 10px;
+ outline: none;
+}
+form input[type="text"],button[type="submit"]{
+ border: none;
+ font-size: 18px;
+ padding: 8px;
+ border-radius: 4px;
+}
+form button[type="submit"]{
+  background: red;
+  color:white;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.recipe-container{
+  text-align: center;
+  margin-top: 20px;
+}
+form button[type="submit"]:hover{
+background-color: #ff5c5c;
+}
+
+/* responsive code */
+@media screen and (max-width: 768px){
+  header nav {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  header nav form{
+    width: 80%;
+  }
 }
